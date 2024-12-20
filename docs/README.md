@@ -1,42 +1,4 @@
 
-## Real-world examples
-
-In addition to the [literal](../examples/pipelines/fl_cross_silo_literal/) and [scatter-gather](../examples/pipelines/fl_cross_silo_scatter_gather/) sample experiments, we also provide examples based on real-world applications.
-
-> Note: The `upload-data` scripts are only included in the examples for the convenience of executing the FL examples. Please ignore this section if you are performing an actual FL experiment for your scenario.
-
-|  |  |  |
-| :-: | :-: | :-: |
-| **Medical Imaging - Horizontal** | **Named Entity Recognition - Horizontal** | **Fraud Detection - Horizontal** |
-| [![medical imaging icon](./pics/industry-medical-imaging.png)](./real-world-examples/pneumonia-horizontal.md) | [![ner icon](./pics/industry-ner.png)](./real-world-examples/ner-horizontal.md) | [![credit card icon](./pics/industry-fraud-detection.png)](./real-world-examples/ccfraud-horizontal.md) |
-| [pneumonia.md](./real-world-examples/pneumonia-horizontal.md) | [ner.md](./real-world-examples/ner-horizontal.md) | [ccfraud.md](./real-world-examples/ccfraud-horizontal.md) |
-| **Fraud Detection - Vertical** | **Fraud Detection - Vertical with Single Shot Communication**  | **Bank Marketing - Vertical** |
-| [![credit card icon](./pics/industry-fraud-detection.png)](./real-world-examples/ccfraud-horizontal.md) | [![credit card icon](./pics/industry-fraud-detection.png)](./real-world-examples/ccfraud-horizontal.md) | [![bank marketing icon](./pics/industry-bank-marketing.png)](./real-world-examples/bank-marketing-vertical.md) |
-| [ccfraud-vertical.md](./real-world-examples/ccfraud-vertical.md) | [ccfraud-vetical-fedonce.md](./real-world-examples/ccfraud-vetical-fedonce.md) | [bank-marketing-vertical.md](./real-world-examples/bank-marketing-vertical.md) |
-
-### Pneumonia detection from chest radiographs
-
-In this example, we train a model to detect pneumonia from chest radiographs. The model is trained on the [Chest X-ray dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)from Kaggle. This example is adapted from [that solution](https://github.com/Azure/medical-imaging/tree/main/federated-learning) by Harmke Alkemade _et al._ See [here](./real-world-examples/pneumonia-horizontal.md) for detailed instructions on how to run this example.
-
-### Named Entity Recognition using MultiNERD dataset
-
-This example shows how to train a federated model for the Named Entity Recognition task. This tutorial uses the [MultiNERD](https://github.com/Babelscape/multinerd/blob/master/README.md) dataset. See [here](./real-world-examples/ner-horizontal.md) for detailed instructions on how to run this example.
-
-### Credit card fraud detection using synthetic transactional data
-
-This example shows how to train a federated model for credit card fraud detection using synthetically generated dataset [Credit Card Transactions Fraud Detection Dataset](https://www.kaggle.com/datasets/kartik2112/fraud-detection). The techniques used include **Dense DNN**, **LSTM**, **LSTM based VAE**. See [here](./real-world-examples/ccfraud-horizontal.md) for detailed instructions on how to run this example.
-
-## FL Frameworks
-
-If you are already using a specific FL framework, you can port your code to work with AzureML. The following table shows the tested frameworks and the corresponding code samples.
-
-| Framework | Status |
-| :-- | :-- |
-| [**Flower**](./frameworks/flower.md) | Experimental, works only with in-cloud FL. |
-| [**NVFlare**](./frameworks/nvflare.md) | Experimental, works only with in-cloud FL. |
-
-# Concepts
-
 ## Why should you consider Federated Learning?
 
 Let's take the example of a data scientist working in a hospital to classify medical images to detect a specific patient condition. The team at the hospital _already_ has a deep learning model trained in a centralized fashion with their own patient data. The model achieved reasonable performance. Now the hospital wants to further improve the model's performance by partnering with other hospitals. Federated Learning will enable them to collaborate on the model training while keeping control of the hospital's own data, complying with their local regulations and privacy obligations, while enabling better quality models for the benefit of their patients.
